@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // For user/org GitHub Pages (https://username.github.io/)
-const BASE = "/";
+const BASE = "/site-inr/";
 
 export default defineConfig({
   base: BASE,
