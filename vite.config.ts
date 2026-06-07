@@ -6,10 +6,8 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Change this to your GitHub Pages repo name if deploying there.
-// Example: if your repo is github.com/usuario/inr-website, set to "/inr-website/"
-// If you're using a custom domain or root deployment, use "/"
-const BASE = process.env.BASE_URL ?? "/";
+// For user/org GitHub Pages (https://username.github.io/)
+const BASE = "/";
 
 export default defineConfig({
   base: BASE,
