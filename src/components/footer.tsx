@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-1 space-y-4">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo-inr.jpg" alt="INR" className="h-10 w-10 rounded-full object-cover" />
+            <img src="/site-inr/logo-inr.jpg" alt="INR" className="h-10 w-10 rounded-full object-cover" />
             <span className="font-serif font-bold text-2xl">INR</span>
           </Link>
           <p className="text-muted-foreground/80 text-sm leading-relaxed">

@@ -21,15 +21,15 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2" data-testid="link-logo">
-          <img src="/logo-inr.jpg" alt="INR" className="h-9 w-9 rounded-full object-cover" />
+          <img src="/site-inr/logo-inr.jpg" alt="INR" className="h-9 w-9 rounded-full object-cover" />
           <span className="font-serif font-bold text-xl text-primary">INR</span>
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <Link 
-              key={item.path} 
+            <Link
+              key={item.path}
               href={item.path}
               className={`text-sm font-medium transition-colors hover:text-primary ${
                 location === item.path ? "text-primary" : "text-foreground/80"
@@ -45,7 +45,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile Nav Toggle */}
-        <button 
+        <button
           className="md:hidden p-2 text-foreground"
           onClick={() => setIsOpen(!isOpen)}
           data-testid="button-mobile-menu"
@@ -58,8 +58,8 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-background border-b shadow-lg py-4 px-4 flex flex-col gap-4">
           {navItems.map((item) => (
-            <Link 
-              key={item.path} 
+            <Link
+              key={item.path}
               href={item.path}
               onClick={() => setIsOpen(false)}
               className={`text-base font-medium py-2 border-b border-border/50 ${

@@ -10,14 +10,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/hero-bg.jpg" 
-            alt="Igreja do Nazareno Rosolém" 
+          <img
+            src="/site-inr/images/hero-bg.jpg"
+            alt="Igreja do Nazareno Rosolém"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-foreground/60 mix-blend-multiply" />
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10 text-center flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-background relative z-20 -mt-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -67,7 +67,7 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -84,7 +84,7 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -103,15 +103,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Short About */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Nossa Essência</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-            Acreditamos em um Evangelho simples, relacional e transformador. Nossa missão é 
-            fazer discípulos semelhantes a Cristo nas nações, começando pelo nosso bairro. 
-            Seja você um cristão de longa data ou alguém apenas buscando respostas, 
+            Acreditamos em um Evangelho simples, relacional e transformador. Nossa missão é
+            fazer discípulos semelhantes a Cristo nas nações, começando pelo nosso bairro.
+            Seja você um cristão de longa data ou alguém apenas buscando respostas,
             aqui você tem um lugar à mesa.
           </p>
           <Button variant="outline" size="lg" className="rounded-full" asChild>
