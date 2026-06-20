@@ -18,3 +18,11 @@ coverage/
 *.tsbuildinfo
 out/
 .next/
+
+# Local tooling artifacts (not part of the app)
+.playwright-mcp/
+.wouter-tmp/
+
+# Design handoff bundle (large; kept out of the repo)
+design-handoff/
+INR-Institucional-handoff.tar.gz
