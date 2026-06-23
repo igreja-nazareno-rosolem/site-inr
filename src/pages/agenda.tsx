@@ -11,18 +11,19 @@ const fadeUp = {
 };
 
 const programacaoSemanal = [
-  { dia: "Segunda", eventos: [] },
-  { dia: "Terça", eventos: [{ hora: "19h00", nome: "Ensaio de Louvor", local: "Templo" }] },
-  { dia: "Quarta", eventos: [{ hora: "19h30", nome: "Culto de Oração e Estudo", local: "Templo" }] },
-  { dia: "Quinta", eventos: [{ hora: "19h30", nome: "Pequenos Grupos (nos lares)", local: "Vários endereços" }] },
-  { dia: "Sexta", eventos: [{ hora: "19h30", nome: "Reunião JNI — Juventude", local: "Templo" }] },
-  { dia: "Sábado", eventos: [{ hora: "09h00", nome: "Ministério Infantil (mensal)", local: "Templo" }] },
+  { dia: "Terça", eventos: [{ hora: "19h30", nome: "Culto de Oração", local: "Templo" }] },
+  { dia: "Sábado", eventos: [{ hora: "19h30", nome: "Culto de Jovens e Adolescentes (JNI)", local: "Templo" }] },
   {
     dia: "Domingo",
     eventos: [
-      { hora: "18h30", nome: "Culto Dominical + Ministério Infantil", local: "Templo" },
+      { hora: "08h30", nome: "Culto Dominical", local: "Templo" },
+      { hora: "09h45", nome: "Escola Bíblica Dominical", local: "Templo" },
+      { hora: "19h00", nome: "Culto Dominical", local: "Templo" },
     ],
   },
+  { dia: "Primeira Sexta do Mês", eventos: [{ hora: "19h30", nome: "Culto de Homens", local: "Templo" }] },
+  { dia: "Terceira Sexta do Mês", eventos: [{ hora: "22h30", nome: "Vigília da Juventude", local: "Templo" }] },
+  { dia: "Última Sexta do Mês", eventos: [{ hora: "19h30", nome: "Culto de Mulheres", local: "Templo" }] },
 ];
 
 const eventosEspeciais = [

@@ -15,13 +15,13 @@ export function Footer() {
             Uma comunidade acolhedora no bairro Rosolém, dedicada a viver e compartilhar o amor autêntico.
           </p>
           <div className="flex gap-4 pt-2">
-            <a href="#" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-ig">
+            <a href="https://www.instagram.com/nazarenorosolem/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-ig">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="#" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-fb">
+            <a href="https://www.facebook.com/inrosolem/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-fb">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="#" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-yt">
+            <a href="https://www.youtube.com/@nazarenorosolem" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-yt">
               <Youtube className="h-5 w-5" />
             </a>
           </div>
@@ -31,19 +31,19 @@ export function Footer() {
           <h4 className="font-serif font-bold text-lg mb-4 text-white">Navegação</h4>
           <ul className="space-y-3 text-sm text-muted-foreground/80">
             <li><Link href="/" className="hover:text-primary transition-colors">Início</Link></li>
-            <li><Link href="/sobre" className="hover:text-primary transition-colors">Nossa História</Link></li>
+            <li><Link href="/sobre" className="hover:text-primary transition-colors">Sobre</Link></li>
             <li><Link href="/lideranca" className="hover:text-primary transition-colors">Liderança</Link></li>
-            <li><Link href="/ministerios" className="hover:text-primary transition-colors">Ministérios</Link></li>
+            <li><Link href="/agenda" className="hover:text-primary transition-colors">Agenda</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-serif font-bold text-lg mb-4 text-white">Links Úteis</h4>
           <ul className="space-y-3 text-sm text-muted-foreground/80">
-            <li><Link href="/agenda" className="hover:text-primary transition-colors">Agenda Semanal</Link></li>
-            <li><Link href="/transparencia" className="hover:text-primary transition-colors">Transparência</Link></li>
-            <li><Link href="/contatos" className="hover:text-primary transition-colors">Pedido de Oração</Link></li>
-            <li><Link href="/contatos" className="hover:text-primary transition-colors">Fale Conosco</Link></li>
+            <li><Link href="/agenda" className="hover:text-primary transition-colors">Programação</Link></li>
+            <li><Link href="/contatos" className="hover:text-primary transition-colors">Contatos</Link></li>
+            <li><Link href="/sobre" className="hover:text-primary transition-colors">Redes Sociais</Link></li>
+            <li><Link href="/sobre" className="hover:text-primary transition-colors">Contribuições</Link></li>
           </ul>
         </div>
 
@@ -52,15 +52,15 @@ export function Footer() {
           <ul className="space-y-4 text-sm text-muted-foreground/80">
             <li className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-primary shrink-0" />
-              <span>Rua Placeholder, 123<br/>Jd. Rosolém, Campinas - SP<br/>13000-000</span>
+              <span>R. Ercílio Antônio Meira, 777<br/>Jardim Santa Izabel<br/>Hortolândia - SP, 13185-220</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-primary shrink-0" />
-              <span>(19) 99999-9999</span>
+              <a href="tel:+5519994504004" className="hover:text-primary transition-colors">(19) 99450-4004</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="h-5 w-5 text-primary shrink-0" />
-              <span>contato@inr.com.br</span>
+              <span>A definir</span>
             </li>
           </ul>
         </div>
