@@ -16,13 +16,13 @@ export function Footer() {
             Uma comunidade acolhedora no bairro Rosolém, dedicada a viver e compartilhar o amor autêntico.
           </p>
           <div className="flex gap-4 pt-2">
-            <a href="https://www.instagram.com/nazarenorosolem/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-ig">
+            <a href="#" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-ig">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://www.facebook.com/inrosolem/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-fb">
+            <a href="#" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-fb">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="https://www.youtube.com/@nazarenorosolem" target="_blank" rel="noopener noreferrer" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-yt">
+            <a href="#" className="text-muted-foreground/80 hover:text-white transition-colors" data-testid="link-social-yt">
               <Youtube className="h-5 w-5" />
             </a>
           </div>
@@ -32,19 +32,19 @@ export function Footer() {
           <h4 className="font-serif font-bold text-lg mb-4 text-white">Navegação</h4>
           <ul className="space-y-3 text-sm text-muted-foreground/80">
             <li><Link href="/" className="hover:text-primary transition-colors">Início</Link></li>
-            <li><Link href="/sobre" className="hover:text-primary transition-colors">Sobre</Link></li>
+            <li><Link href="/sobre" className="hover:text-primary transition-colors">Nossa História</Link></li>
             <li><Link href="/lideranca" className="hover:text-primary transition-colors">Liderança</Link></li>
-            <li><Link href="/agenda" className="hover:text-primary transition-colors">Agenda</Link></li>
+            <li><Link href="/ministerios" className="hover:text-primary transition-colors">Ministérios</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-serif font-bold text-lg mb-4 text-white">Links Úteis</h4>
           <ul className="space-y-3 text-sm text-muted-foreground/80">
-            <li><Link href="/agenda" className="hover:text-primary transition-colors">Programação</Link></li>
-            <li><Link href="/contatos" className="hover:text-primary transition-colors">Contatos</Link></li>
-            <li><Link href="/sobre" className="hover:text-primary transition-colors">Redes Sociais</Link></li>
-            <li><Link href="/sobre" className="hover:text-primary transition-colors">Contribuições</Link></li>
+            <li><Link href="/agenda" className="hover:text-primary transition-colors">Agenda Semanal</Link></li>
+            <li><Link href="/transparencia" className="hover:text-primary transition-colors">Transparência</Link></li>
+            <li><Link href="/contatos" className="hover:text-primary transition-colors">Pedido de Oração</Link></li>
+            <li><Link href="/contatos" className="hover:text-primary transition-colors">Fale Conosco</Link></li>
           </ul>
         </div>
 

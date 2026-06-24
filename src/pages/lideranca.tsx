@@ -10,6 +10,32 @@ const fadeUp = {
   }),
 };
 
+const pastores = [
+  {
+    nome: "Pr. Carlos Eduardo Mendes",
+    funcao: "Pastor Titular",
+    bio: "Ordenado pela Igreja do Nazareno há mais de 20 anos, Pr. Carlos lidera a INR com visão pastoral e coração missionário. Formado em Teologia pelo Seminário Nazareno, é apaixonado por discipulado e família.",
+    anos: "Pastor desde 2008",
+  },
+  {
+    nome: "Pra. Renata Mendes",
+    funcao: "Pastora Auxiliar — Família e Mulheres",
+    bio: "Pra. Renata coordena os ministérios voltados à família e às mulheres da INR. Com formação em Psicologia e Teologia, ela combina cuidado prático e espiritual em tudo que faz.",
+    anos: "Na liderança desde 2010",
+  },
+];
+
+const lideres = [
+  { nome: "Diac. Marcos Oliveira", funcao: "Diácono — Administração e Finanças", area: "Financeiro" },
+  { nome: "Diac. Fernanda Costa", funcao: "Diaconisa — Ministério Infantil", area: "Infantil" },
+  { nome: "Eld. Roberto Alves", funcao: "Presbítero — Discipulado", area: "Discipulado" },
+  { nome: "Eld. Patrícia Lima", funcao: "Presbítera — Ações Sociais", area: "Social" },
+  { nome: "Joel Santos", funcao: "Líder JNI — Juventude Nazarena", area: "JNI" },
+  { nome: "Camila Ferreira", funcao: "Líder de Louvor e Adoração", area: "Louvor" },
+  { nome: "Thiago Rodrigues", funcao: "Coordenador de Mídia", area: "Mídia" },
+  { nome: "Ana Paula Silva", funcao: "Secretária Geral", area: "Secretaria" },
+];
+
 function Avatar({ nome, size = "lg" }: { nome: string; size?: "lg" | "md" }) {
   const initials = nome
     .split(" ")
@@ -59,38 +85,8 @@ export default function Lideranca() {
         </div>
       </section>
 
-      {/* Pastor Senior */}
+      {/* Pastores */}
       <section className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-serif text-3xl md:text-4xl font-bold mb-4 text-center"
-          >
-            Pastor Sênior
-          </motion.h2>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-card border border-border rounded-2xl p-8 flex flex-col gap-5 max-w-2xl mx-auto"
-          >
-            <div className="flex items-center gap-5">
-              <Avatar nome="Pastor Isaque" size="lg" />
-              <div>
-                <h3 className="font-serif text-2xl font-bold">Pr. Pastor Isaque</h3>
-                <p className="text-primary text-sm font-medium mt-1">Pastor Sênior, Fundador da Igreja Local</p>
-                <p className="text-muted-foreground text-xs mt-1">Pastor desde 2001</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Equipe Pastoral */}
-      <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -98,7 +94,7 @@ export default function Lideranca() {
             viewport={{ once: true }}
             className="font-serif text-3xl md:text-4xl font-bold mb-4 text-center"
           >
-            Equipe Pastoral
+            Pastores
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -106,35 +102,40 @@ export default function Lideranca() {
             viewport={{ once: true }}
             className="text-muted-foreground text-center mb-14 max-w-xl mx-auto"
           >
-            Pastores dedicados ao ministério e cuidado espiritual.
+            Liderança espiritual com compromisso pastoral e amor pela comunidade.
           </motion.p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              "Pr. Adnan Attuy",
-              "Pr. Gustavo Fontes",
-              "Pr. Gabriel",
-              "Pr. Rivaldo Sena",
-            ].map((nome, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {pastores.map((p, i) => (
               <motion.div
-                key={nome}
+                key={p.nome}
                 custom={i}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center text-center gap-4"
+                className="bg-card border border-border rounded-2xl p-8 flex flex-col gap-5"
+                data-testid={`card-pastor-${i}`}
               >
-                <Avatar nome={nome} size="md" />
-                <h4 className="font-serif font-bold text-base">{nome}</h4>
+                <div className="flex items-center gap-5">
+                  <Avatar nome={p.nome} size="lg" />
+                  <div>
+                    <h3 className="font-serif text-xl font-bold">{p.nome}</h3>
+                    <p className="text-primary text-sm font-medium mt-1">{p.funcao}</p>
+                    <p className="text-muted-foreground text-xs mt-1">{p.anos}</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed border-t border-border pt-5">
+                  {p.bio}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Gestão & Administração */}
-      <section className="py-20 bg-background">
+      {/* Líderes */}
+      <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -142,175 +143,34 @@ export default function Lideranca() {
             viewport={{ once: true }}
             className="font-serif text-3xl md:text-4xl font-bold mb-4 text-center"
           >
-            Gestão & Administração
-          </motion.h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            {[
-              { funcao: "Secretaria", nome: "Matheus Gabriel" },
-              { funcao: "Administração Geral", nome: "Rones Silva" },
-              { funcao: "Tesouraria", nome: "Sidimar Oliveira" },
-            ].map((item, i) => (
-              <motion.div
-                key={item.funcao}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center text-center gap-3"
-              >
-                <Avatar nome={item.nome} size="md" />
-                <div>
-                  <p className="text-primary text-xs font-semibold tracking-widest uppercase mb-1">{item.funcao}</p>
-                  <h4 className="font-serif font-bold text-sm">{item.nome}</h4>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Junta Local */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-serif text-3xl md:text-4xl font-bold mb-1 text-center"
-          >
-            Junta Local
+            Equipe de Liderança
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-muted-foreground text-center mb-12"
+            className="text-muted-foreground text-center mb-14 max-w-xl mx-auto"
           >
-            Diáconos e líderes responsáveis pelos departamentos ministeriais.
+            Diáconos, presbíteros e líderes ministeriais que formam o time de serviço da INR.
           </motion.p>
 
-          {/* Ecônomos */}
-          <div className="mb-16">
-            <h3 className="font-serif text-2xl font-bold mb-6 text-center">Ecônomos</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                "Fernando Martins",
-                "Alan Santos",
-                "Elton Souza",
-                "Claudinei Nascimento",
-              ].map((nome, i) => (
-                <motion.div
-                  key={nome}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center text-center gap-3"
-                >
-                  <Avatar nome={nome} size="md" />
-                  <h4 className="font-serif font-bold text-sm">{nome}</h4>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Departamentos Especiais */}
-          <div className="mb-16">
-            <h3 className="font-serif text-2xl font-bold mb-6 text-center">Departamentos Especiais</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {[
-                { funcao: "DNI - Discipulado", nome: "Dayana Barbosa" },
-                { funcao: "JNI - Juventude", nome: "Marcos Cogo" },
-                { funcao: "MNI - Missões", nome: "Diego Vieira" },
-              ].map((item, i) => (
-                <motion.div
-                  key={item.funcao}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center text-center gap-3"
-                >
-                  <Avatar nome={item.nome} size="md" />
-                  <div>
-                    <p className="text-primary text-xs font-semibold tracking-widest uppercase mb-1">{item.funcao}</p>
-                    <h4 className="font-serif font-bold text-sm">{item.nome}</h4>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mordomos */}
-          <div>
-            <h3 className="font-serif text-2xl font-bold mb-6 text-center">Mordomos</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                "Valdemir Jorge",
-                "Carla Nascimento",
-                "Lena Amorim",
-                "Valdirene Stegani",
-              ].map((nome, i) => (
-                <motion.div
-                  key={nome}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center text-center gap-3"
-                >
-                  <Avatar nome={nome} size="md" />
-                  <h4 className="font-serif font-bold text-sm">{nome}</h4>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Departamentos Gerais */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-serif text-3xl md:text-4xl font-bold mb-12 text-center"
-          >
-            Departamentos Gerais
-          </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { funcao: "Mídia", nome: "Rafael Fonseca" },
-              { funcao: "Louvor e Músicos", nome: "Wesley Alves" },
-              { funcao: "Eleitas", nome: "Carla Nascimento" },
-              { funcao: "Homens de Honra", nome: "Alan" },
-              { funcao: "Família", nome: "Pr. Adnan e Debora" },
-              { funcao: "Infantil", nome: "Adriana de Paula" },
-              { funcao: "Recepção", nome: "Michele" },
-              { funcao: "Ministério Compaixão", nome: "Pr. Adnan e Debora" },
-              { funcao: "Casa da Esperança", nome: "Pr. Gabriel" },
-              { funcao: "Dança", nome: "Gabrielly Desanti" },
-            ].map((item, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {lideres.map((l, i) => (
               <motion.div
-                key={item.funcao}
+                key={l.nome}
                 custom={i}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-card border border-border rounded-2xl p-6 flex items-center gap-4"
+                className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center text-center gap-4"
+                data-testid={`card-lider-${i}`}
               >
-                <Avatar nome={item.nome} size="md" />
+                <Avatar nome={l.nome} size="md" />
                 <div>
-                  <p className="text-primary text-xs font-semibold tracking-widest uppercase mb-1">{item.funcao}</p>
-                  <h4 className="font-serif font-bold text-sm">{item.nome}</h4>
+                  <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-2 py-0.5 rounded-full mb-2">{l.area}</span>
+                  <h4 className="font-serif font-bold text-sm leading-snug">{l.nome}</h4>
+                  <p className="text-muted-foreground text-xs mt-1 leading-snug">{l.funcao}</p>
                 </div>
               </motion.div>
             ))}
@@ -319,7 +179,7 @@ export default function Lideranca() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <Users className="h-12 w-12 text-primary mx-auto mb-6" />
           <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">Quer ser parte da equipe?</h2>
@@ -327,10 +187,11 @@ export default function Lideranca() {
             Temos diferentes formas de servir na INR — cada pessoa tem dons únicos que a comunidade precisa. Converse com a liderança e descubra onde você pode contribuir.
           </p>
           <a
-            href="https://wa.me/5519994504004?text=Ol%C3%A1!%20Gostaria%20de%20saber%20como%20posso%20servir%20na%20INR."
+            href="https://wa.me/5519999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20como%20posso%20servir%20na%20INR."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-8 py-3 font-medium hover:opacity-90 transition-opacity"
+            data-testid="button-quero-servir"
           >
             Quero servir
           </a>
