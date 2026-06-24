@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
-import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
+import { Instagram, Facebook, Youtube } from "@/components/icons/social-icons";
 
 export function Footer() {
   return (
@@ -52,16 +53,13 @@ export function Footer() {
           <ul className="space-y-4 text-sm text-muted-foreground/80">
             <li className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-primary shrink-0" />
-              <span>R. Ercílio Antônio Meira, 777<br/>Jardim Santa Izabel<br/>Hortolândia - SP, 13185-220</span>
+              <span>R. Ercílio Antônio Meira, 777<br/>Jd. Santa Izabel, Hortolândia - SP<br/>13185-220</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-primary shrink-0" />
-              <a href="tel:+5519994504004" className="hover:text-primary transition-colors">(19) 99450-4004</a>
+              <span>(19) 99450-4004</span>
             </li>
-            <li className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-primary shrink-0" />
-              <span>A definir</span>
-            </li>
+            {/* TODO: confirmar e-mail oficial com a equipe */}
           </ul>
         </div>
       </div>
