@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
-import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
+import { Instagram, Facebook, Youtube } from "@/components/icons/social-icons";
 
 export function Footer() {
   return (
@@ -52,16 +53,13 @@ export function Footer() {
           <ul className="space-y-4 text-sm text-muted-foreground/80">
             <li className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-primary shrink-0" />
-              <span>Rua Placeholder, 123<br/>Jd. Rosolém, Campinas - SP<br/>13000-000</span>
+              <span>R. Ercílio Antônio Meira, 777<br/>Jd. Santa Izabel, Hortolândia - SP<br/>13185-220</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-primary shrink-0" />
-              <span>(19) 99999-9999</span>
+              <span>(19) 99450-4004</span>
             </li>
-            <li className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-primary shrink-0" />
-              <span>contato@inr.com.br</span>
-            </li>
+            {/* TODO: confirmar e-mail oficial com a equipe */}
           </ul>
         </div>
       </div>
