@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { BookOpen, Heart, Target, Users, Instagram, Facebook, Youtube, MapPin } from "lucide-react";
+import { BookOpen, Heart, Target, Users, MapPin } from "lucide-react";
+import { Instagram, Facebook, Youtube } from "@/components/icons/social-icons";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
