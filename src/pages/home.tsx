@@ -61,7 +61,7 @@ export default function Home() {
                 <Clock className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-serif text-xl font-bold mb-2">Cultos Dominicais</h3>
-              <p className="text-muted-foreground mb-4">Momentos de louvor, oração e uma palavra edificante.</p>
+              <p className="text-muted-foreground mb-4">Domingos às 18h30. Momentos de louvor, oração e uma palavra edificante.</p>
               <Link href="/agenda" className="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all">
                 Ver programação completa <ArrowRight className="h-4 w-4" />
               </Link>
@@ -84,7 +84,22 @@ export default function Home() {
               </Link>
             </motion.div>
 
-
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-primary rounded-2xl p-8 shadow-lg shadow-primary/20 text-primary-foreground"
+            >
+              <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mb-6">
+                <Users className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="font-serif text-xl font-bold mb-2 text-white">Pequenos Grupos</h3>
+              <p className="text-primary-foreground/90 mb-4">Conecte-se durante a semana. Comunidade, estudo e partilha de vida nos lares.</p>
+              <Link href="/ministerios" className="text-white font-medium flex items-center gap-2 hover:gap-3 transition-all">
+                Encontre um grupo <ArrowRight className="h-4 w-4" />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
