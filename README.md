@@ -9,9 +9,10 @@ Site institucional da **Igreja do Nazareno Rosolém (INR)** — Hortolândia/SP.
 - **React 19** + **TypeScript** (modo strict)
 - **Vite 8** (bundler Rolldown/Oxc)
 - **Tailwind CSS v4** — configuração CSS-first (não há `tailwind.config`; os tokens ficam em `src/index.css` via `@theme` + variáveis CSS)
-- **shadcn/ui** (primitivos Radix) em `src/components/ui/`
-- **wouter** (rotas) · **TanStack Query** (preparado para a Fase 2) · framer-motion · lucide-react
-- **Design System INR** próprio — ver [`DESIGN_SYSTEM.md`](./DESIGN_SYSTEM.md)
+- **wouter** (rotas) · **TanStack Query** (preparado para a Fase 2) · **qrcode.react** (QR do PIX)
+- **Design System INR** próprio (classes `inr-*` + primitivos React em pt-BR) — ver [`DESIGN_SYSTEM.md`](./DESIGN_SYSTEM.md)
+
+> O kit shadcn/ui que veio da base antiga foi removido por não ter uso — o Design System INR o substituiu. Os tokens em `src/index.css` continuam compatíveis com shadcn: se a Fase 2+ precisar de um componente Radix pronto, basta `npx shadcn@latest add <componente>`.
 
 ## Pré-requisitos
 
@@ -43,18 +44,20 @@ Acesse **http://localhost:5173/site-inr/** (a base `/site-inr/` faz parte da URL
 
 ```
 src/
-  App.tsx                  → Rotas (wouter) + Layout (Navbar/Footer). Registre páginas novas aqui.
-  pages/                   → Uma página por arquivo (home, sobre, lideranca, ...)
+  App.tsx                  → Rotas (wouter) + Estrutura (Cabecalho/Rodape). Registre páginas novas aqui.
+  pages/                   → Uma página por arquivo (inicio, sobre, lideranca, ...)
   components/
-    design-system/         → Primitivos React do Design System INR (Button, Card, Chip, ...)
-    icons/                 → Ícones de marca (SVG inline)
-    ui/                    → Componentes shadcn/ui (Radix)
-    navbar.tsx, footer.tsx
+    design-system/         → Primitivos React do Design System INR (Botao, Cartao, Chip, ...)
+    icones/                → Ícones do design + redes sociais (SVG inline)
+    cabecalho.tsx, rodape.tsx, hero-pagina.tsx
   styles/
-    inr-design-system.css  → Camada de classes utilitárias `inr-*` do Design System
-  index.css                → Tokens da marca (cores, gradientes, Manrope) + tema shadcn
-  lib/utils.ts             → util `cn()` (clsx + tailwind-merge)
-public/                    → Assets estáticos (logo, imagens, robots.txt)
+    inr-design-system.css  → Camada de classes `inr-*` do Design System
+  index.css                → Tokens da marca (cores, gradientes, Manrope)
+  lib/
+    dados-igreja.ts        → Dados canônicos da igreja (conteúdo aprovado)
+    pix.ts                 → Payload EMV do PIX (QR Code)
+    utils.ts               → util `cn()` (clsx + tailwind-merge)
+public/                    → Assets estáticos (logos, fotos/, robots.txt)
 ```
 
 Alias de import: `@/` → `src/` (configurado em `vite.config.ts` e `tsconfig.json`).

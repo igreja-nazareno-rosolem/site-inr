@@ -6,14 +6,14 @@ Portado fielmente do handoff aprovado (projeto **"INR Institucional"** no claude
 
 | Camada | Arquivo | Conteúdo |
 |--------|---------|----------|
-| **Tokens** | `src/index.css` | Variáveis CSS da marca + mapeamento `@theme` do Tailwind (cores/fonte). Mantém também o sistema de tokens do shadcn, alinhado à marca. |
+| **Tokens** | `src/index.css` | Variáveis CSS da marca + mapeamento `@theme` do Tailwind (cores/fonte). Inclui tokens semânticos compatíveis com shadcn (o kit foi removido por falta de uso; readicionável via `npx shadcn add`). |
 | **CSS de componentes** | `src/styles/inr-design-system.css` | Classes `inr-*` (botões, cartões, chips, hero, navbar, menu lateral, rodapé, agenda, seções da identidade etc.), em `@layer components`. |
 | **Primitivos React** | `src/components/design-system/` | Wrappers tipados sobre as classes `inr-*`. Importe de `@/components/design-system`. |
 | **Ícones do design** | `src/components/icones/icones.tsx` | Conjunto de ícones de traço do handoff (`Icone nome="..."`) + `GlifoWhatsApp`. |
 | **Ícones de redes** | `src/components/icones/redes-sociais.tsx` | Instagram/Facebook/Youtube em SVG inline (o lucide v1 removeu ícones de marca). |
 | **Dados canônicos** | `src/lib/dados-igreja.ts` | Conteúdo aprovado (igreja, agenda, pastores, equipe, ministérios, contatos, PIX, identidade ministerial) + `urlPublica()`. |
 
-> As classes têm o prefixo **`inr-`** de propósito — nomes crus como `.card`, `.grid`, `.section`, `.dark` colidiriam com utilitários do Tailwind e com a classe de dark-mode do shadcn.
+> As classes têm o prefixo **`inr-`** de propósito — nomes crus como `.card`, `.grid`, `.section`, `.dark` colidiriam com utilitários do Tailwind (e com convenções como a classe de dark-mode usada pelo ecossistema shadcn, caso volte a ser adotado).
 
 > **Nomenclatura:** arquivos, variáveis e props em **pt-BR**; termos técnicos consagrados permanecem em inglês (`hover`, `asChild`, `Link`, `URL`, `props`, `Chip`).
 

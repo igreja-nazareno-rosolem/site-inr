@@ -8,7 +8,7 @@ Institutional website for **Igreja do Nazareno Rosolém (INR)**, a Church of the
 
 All UI copy is in Brazilian Portuguese (pt-BR). Most visitors arrive via WhatsApp/Instagram on mobile — design mobile-first; every page must stay fully responsive (no horizontal overflow at 360–768px).
 
-**Naming convention:** files, variables, props, and comments are written in **pt-BR** (e.g. `cabecalho.tsx`, `dados-igreja.ts`, `variante`, `sobretitulo`). Established technical loanwords stay in English (`hover`, `asChild`, `Link`, `URL`, `props`, `Chip`, `Layout`). The vendored shadcn kit in `src/components/ui/` is generated code and keeps its original English names.
+**Naming convention:** files, variables, props, and comments are written in **pt-BR** (e.g. `cabecalho.tsx`, `dados-igreja.ts`, `variante`, `sobretitulo`). Established technical loanwords stay in English (`hover`, `asChild`, `Link`, `URL`, `props`, `Chip`, `Layout`). If generated/vendored code is ever added (e.g. shadcn components), it keeps its original English names.
 
 **Content rule:** all page content comes from the approved design handoff and lives in `src/lib/dados-igreja.ts` — never invent names, e-mails, photos, or institutional text. Anything still pending team confirmation is marked `{/* TODO: confirmar com a equipe */}` or rendered with `FotoPlaceholder`.
 
@@ -30,9 +30,9 @@ No lint, format, or test setup exists yet (configuring lint/format is a Phase 1 
 
 - Vite 7 + React 19 + TypeScript (strict)
 - Tailwind CSS v4 via `@tailwindcss/vite` — **there is no `tailwind.config`**; theme tokens live in `src/index.css` using `@theme` + CSS variables
-- shadcn/ui-style components (Radix primitives) in `src/components/ui/` — generated code, edit in place
+- No shadcn kit: the AI-base `src/components/ui/` was removed as dead code once the INR design system replaced it. The semantic tokens in `src/index.css` stay shadcn-compatible — if Phase 2+ needs a ready Radix component, `npx shadcn@latest add <component>` works without rework
 - wouter for routing; TanStack Query provider already wired in `App.tsx` (unused today, kept for Phase 2 dynamic data)
-- framer-motion, lucide-react, sonner, react-hook-form + zod resolvers, qrcode.react available
+- Lean dependency set (9 runtime deps): wouter, TanStack Query, qrcode.react, Radix Slot + cva/clsx/tailwind-merge. Add libraries only when a phase actually needs them
 
 ## Architecture
 
