@@ -1,23 +1,24 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { linkWhatsApp } from "@/lib/dados-igreja";
 
-export interface WhatsAppFloatProps
+export interface WhatsAppFlutuanteProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
-  /** Phone in international format without symbols, e.g. "5519994504004". */
-  phone: string;
-  /** Pre-filled message; URL-encoded automatically. */
-  message?: string;
+  /** Telefone em formato internacional sem símbolos, ex.: "551938698121". */
+  telefone: string;
+  /** Mensagem pré-preenchida; codificada na URL automaticamente. */
+  mensagem?: string;
 }
 
-const DEFAULT_MESSAGE = "Olá! Vim pelo site da INR e gostaria de uma informação.";
+const MENSAGEM_PADRAO = "Olá! Vim pelo site da INR e gostaria de uma informação.";
 
-/** Fixed floating WhatsApp button (bottom-right). */
-export const WhatsAppFloat = React.forwardRef<HTMLAnchorElement, WhatsAppFloatProps>(
-  ({ className, phone, message = DEFAULT_MESSAGE, ...props }, ref) => (
+/** Botão flutuante fixo do WhatsApp (canto inferior direito). */
+export const WhatsAppFlutuante = React.forwardRef<HTMLAnchorElement, WhatsAppFlutuanteProps>(
+  ({ className, telefone, mensagem = MENSAGEM_PADRAO, ...props }, ref) => (
     <a
       ref={ref}
       className={cn("inr-wa-float", className)}
-      href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`}
+      href={linkWhatsApp(telefone, mensagem)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale no WhatsApp"
@@ -29,4 +30,4 @@ export const WhatsAppFloat = React.forwardRef<HTMLAnchorElement, WhatsAppFloatPr
     </a>
   )
 );
-WhatsAppFloat.displayName = "InrWhatsAppFloat";
+WhatsAppFlutuante.displayName = "InrWhatsAppFlutuante";

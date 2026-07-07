@@ -1,18 +1,17 @@
 /**
- * INR Design System — typed React primitives over the `inr-*` CSS layer
- * (src/styles/inr-design-system.css), ported from the approved design handoff.
+ * Design System da INR — primitivos React tipados sobre a camada CSS `inr-*`
+ * (src/styles/inr-design-system.css), portada fielmente do handoff aprovado.
  *
- * Tokens (colors, gradients, radii, shadows, Manrope) live in src/index.css.
- * These primitives are framework-agnostic building blocks; pages adopt them
- * during the page-build phase. Existing pages are intentionally left untouched.
+ * Os tokens (cores, gradientes, raios, sombras, Manrope) vivem em src/index.css.
+ * Nomenclatura em pt-BR, mantendo termos técnicos consagrados (hover, asChild, props).
  */
-export { Button, buttonVariants, type ButtonProps } from "./button";
-export { Chip, chipVariants, type ChipProps } from "./chip";
-export { Card, type CardProps } from "./card";
-export { Eyebrow, SectionHeading, type EyebrowProps, type SectionHeadingProps } from "./section-heading";
-export { IconBadge, type IconBadgeProps } from "./icon-badge";
-export { AvatarInitials, type AvatarInitialsProps } from "./avatar-initials";
-export { ImagePlaceholder, type ImagePlaceholderProps } from "./image-placeholder";
-export { ScheduleRow, type ScheduleRowProps } from "./schedule-row";
-export { ServiceTimeCard, type ServiceTimeCardProps } from "./service-time-card";
-export { WhatsAppFloat, type WhatsAppFloatProps } from "./whatsapp-float";
+export { Botao, variantesBotao, type BotaoProps } from "./botao";
+export { Chip, variantesChip, type ChipProps } from "./chip";
+export { Cartao, type CartaoProps } from "./cartao";
+export { Sobretitulo, TituloSecao, type SobretituloProps, type TituloSecaoProps } from "./titulo-secao";
+export { Emblema, type EmblemaProps } from "./emblema";
+export { AvatarIniciais, type AvatarIniciaisProps } from "./avatar-iniciais";
+export { FotoPlaceholder, type FotoPlaceholderProps } from "./foto-placeholder";
+export { LinhaAgenda, type LinhaAgendaProps } from "./linha-agenda";
+export { CartaoCulto, type CartaoCultoProps } from "./cartao-culto";
+export { WhatsAppFlutuante, type WhatsAppFlutuanteProps } from "./whatsapp-flutuante";
