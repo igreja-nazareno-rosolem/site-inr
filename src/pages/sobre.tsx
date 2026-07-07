@@ -85,6 +85,44 @@ export default function Sobre() {
         </div>
       </section>
 
+      {/* Declaração de Cultura */}
+      <section className="inr-section inr-light">
+        <div className="inr-wrap">
+          <TituloSecao
+            centralizado
+            sobretitulo="Nossa cultura"
+            titulo="Declaração de Cultura da Igreja"
+          />
+          <div
+            style={{
+              maxWidth: 760,
+              margin: "0 auto",
+              display: "flex",
+              flexDirection: "column",
+              gap: 16,
+              textAlign: "center",
+            }}
+          >
+            {IDENTIDADE.declaracaoCultura.map((paragrafo) => (
+              <p key={paragrafo} className="inr-lead" style={{ maxWidth: "none" }}>
+                {paragrafo}
+              </p>
+            ))}
+            <p
+              className="inr-grad-ink"
+              style={{
+                fontWeight: 800,
+                letterSpacing: "-.02em",
+                fontSize: "clamp(22px, 3.2vw, 32px)",
+                marginTop: 10,
+              }}
+            >
+              {IDENTIDADE.declaracaoCulturaFinal}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Valores */}
       <section className="inr-section inr-plain">
         <div className="inr-wrap">

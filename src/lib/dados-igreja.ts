@@ -89,6 +89,16 @@ export const IDENTIDADE = {
     "Aqui histórias são transformadas.",
     "Aqui sempre existe um novo começo.",
   ],
+  /** Declaração de Cultura da Igreja — texto aprovado, verbatim do documento oficial. */
+  declaracaoCultura: [
+    "Somos uma igreja centrada em Jesus e comprometida em viver o evangelho de forma verdadeira.",
+    "Acreditamos que, em Cristo, sempre existe um novo começo. Por isso somos uma comunidade que acolhe pessoas com amor, graça e esperança.",
+    "Valorizamos uma vida de santidade, buscando refletir o caráter de Cristo em tudo o que fazemos. Caminhamos juntos no discipulado, ajudando uns aos outros a crescer na fé e a viver o propósito de Deus.",
+    "Cremos que Deus transforma histórias, restaura vidas e conduz cada pessoa a descobrir o propósito para o qual foi criada.",
+    "Somos uma igreja que ama pessoas, serve com alegria e vive a missão de Deus.",
+    "Nosso desejo é ver vidas sendo transformadas, famílias sendo restauradas e nossa cidade sendo alcançada pelo amor de Cristo.",
+  ],
+  declaracaoCulturaFinal: "Aqui celebramos novos começos.",
   manifestoIntro:
     "Cremos em um Deus que transforma vidas — que restaura o que foi quebrado, cura o que foi ferido e oferece novos começos para todos que se aproximam dEle. Ninguém está longe demais da graça de Deus. Amamos nossa cidade e desejamos ser luz onde há escuridão, esperança onde há dor e fé onde há dúvida.",
 } as const;
