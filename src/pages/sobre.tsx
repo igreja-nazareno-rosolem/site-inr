@@ -12,6 +12,45 @@ const fadeUp = {
 };
 
 export default function Sobre() {
+  const values = [
+    {
+      title: "Cristo é o nosso centro",
+      desc: "Jesus é o fundamento da nossa fé, da nossa mensagem e da nossa esperança. Tudo o que somos e fazemos aponta para Ele.",
+    },
+    {
+      title: "Novos começos em Cristo",
+      desc: "Acreditamos que o evangelho tem poder para transformar vidas. Em Cristo, ninguém está perdido demais e sempre existe um novo começo.",
+    },
+    {
+      title: "Santidade que transforma",
+      desc: "Buscamos viver uma vida santa, guiada pelo Espírito Santo, refletindo o caráter de Cristo em nossas atitudes e relacionamentos.",
+    },
+    {
+      title: "Amor que acolhe",
+      desc: "Somos uma igreja que recebe pessoas com graça, compaixão e respeito, acreditando que todos são amados por Deus.",
+    },
+    {
+      title: "Discipulado que forma",
+      desc: "Caminhamos juntos no crescimento espiritual, ajudando pessoas a conhecer, seguir e viver como Jesus.",
+    },
+    {
+      title: "Propósito que envia",
+      desc: "Acreditamos que cada pessoa foi criada por Deus com um propósito. Por isso capacitamos e enviamos pessoas para servir e impactar o mundo.",
+    },
+    {
+      title: "Missão que alcança",
+      desc: "Somos chamados para levar esperança e o evangelho à nossa cidade, vivendo a missão de Deus onde estamos.",
+    },
+  ];
+
+  const dnaStatements = [
+    "Centraremos nossa vida em Jesus.",
+    "Somos um lugar de novos começos.",
+    "Somos uma família que acolhe e cuida de pessoas.",
+    "Somos discípulos que fazem discípulos.",
+    "Somos uma igreja em missão, levando esperança à cidade.",
+  ];
+
   return (
     <div className="flex flex-col">
       {/* Hero */}
@@ -23,7 +62,7 @@ export default function Sobre() {
             transition={{ duration: 0.6 }}
             className="text-primary font-medium tracking-widest uppercase text-sm mb-4"
           >
-            Nossa História
+            Nossa Identidade
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -31,103 +70,36 @@ export default function Sobre() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-serif text-4xl md:text-6xl font-bold leading-tight text-white mb-6"
           >
-            Mais de três décadas de fé, amor e comunidade
+            Um Lugar de Novos Começos
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.25 }}
+            className="text-lg text-white/70 leading-relaxed mb-4"
+          >
+            Onde Histórias São Transformadas
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg text-white/70 leading-relaxed"
           >
-            Nascemos como uma pequena congregação com um grande sonho: ser um ponto de luz no bairro Rosolém. Hoje, somos uma família que cresce unida pela graça e pelo propósito de Cristo.
+            Somos uma igreja de novos começos, onde Deus transforma histórias e pessoas descobrem seu propósito em Cristo.
           </motion.p>
+          <motion.blockquote
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="mt-8 rounded-2xl border border-white/15 bg-white/10 px-6 py-4 text-sm md:text-base text-white/90"
+          >
+            “Assim que, se alguém está em Cristo, nova criatura é; as coisas antigas já passaram; eis que se fizeram novas.” — 2 Coríntios 5:17
+          </motion.blockquote>
         </div>
       </section>
 
-      {/* História timeline */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="flex flex-col md:flex-row gap-16 items-start">
-            <div className="md:w-1/2 space-y-6">
-              <motion.h2
-                custom={0}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="font-serif text-3xl md:text-4xl font-bold"
-              >
-                Do início até hoje
-              </motion.h2>
-              <motion.p
-                custom={1}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="text-muted-foreground leading-relaxed"
-              >
-                A Igreja do Nazareno Rosolém foi fundada em 1991 por um pequeno grupo de famílias que se reunia em salas de estar com o coração cheio de esperança. O que começou como um culto doméstico se tornou uma das comunidades mais ativas do bairro.
-              </motion.p>
-              <motion.p
-                custom={2}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="text-muted-foreground leading-relaxed"
-              >
-                Ao longo dos anos, a INR cresceu não apenas em número, mas em profundidade. Expandimos nossos ministérios, construímos nosso templo próprio em 2003, e hoje servimos a centenas de famílias com programas de discipulado, ação social, e missões locais e internacionais.
-              </motion.p>
-              <motion.p
-                custom={3}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="text-muted-foreground leading-relaxed"
-              >
-                Nossa história é feita de pessoas — de histórias de transformação, de famílias restauradas, de jovens que encontraram propósito. E ela continua sendo escrita a cada domingo, cada grupo de casa, cada ato de serviço.
-              </motion.p>
-            </div>
-
-            <div className="md:w-1/2 space-y-0">
-              {[
-                { year: "1991", title: "Fundação da igreja", desc: "Primeiro culto realizado na casa de uma família fundadora no Jd. Rosolém." },
-                { year: "1998", title: "Primeiro templo", desc: "Construção do primeiro espaço próprio — fruto de muito sacrifício e fé coletiva." },
-                { year: "2003", title: "Expansão ministerial", desc: "Lançamento dos ministérios JNI, infantil e louvor como departamentos estruturados." },
-                { year: "2012", title: "Missões locais", desc: "Início do programa de ações sociais no bairro e plantio de células nas casas." },
-                { year: "2024", title: "Presente e futuro", desc: "Seguimos crescendo em fé, relevância comunitária e impacto transformador." },
-              ].map((item, i) => (
-                <motion.div
-                  key={item.year}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  className="flex gap-6 pb-8 relative"
-                  data-testid={`timeline-item-${item.year}`}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center shrink-0">
-                      <span className="text-primary text-xs font-bold">{item.year.slice(2)}</span>
-                    </div>
-                    {i < 4 && <div className="w-0.5 flex-1 bg-border mt-2" />}
-                  </div>
-                  <div className="pb-2">
-                    <p className="text-primary text-xs font-semibold tracking-widest uppercase mb-1">{item.year}</p>
-                    <h4 className="font-serif font-bold text-lg mb-1">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Visão, Missão, Propósito */}
+      {/* Visão e Missão */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-5xl">
           <motion.div
@@ -137,28 +109,22 @@ export default function Sobre() {
             className="text-center mb-14"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">O que nos move</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Nossa identidade é moldada por três pilares que guiam tudo que fazemos como comunidade de fé.</p>
+            <p className="text-muted-foreground max-w-2xl mx-auto">Nossa identidade é formada por uma visão clara, uma missão profunda e uma cultura que aponta sempre para Jesus.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 icon: Target,
                 label: "Visão",
-                title: "Ser uma comunidade de transformação",
-                desc: "Enxergamos um bairro, uma cidade e um mundo transformados pelo amor prático e genuíno de Cristo — onde toda pessoa encontra pertencimento, dignidade e esperança.",
+                title: "Um novo começo em Cristo",
+                desc: "Ser uma igreja onde pessoas encontram um novo começo em Cristo, descobrem seu propósito e têm suas histórias transformadas pelo poder de Deus.",
               },
               {
                 icon: Heart,
                 label: "Missão",
-                title: "Fazer discípulos que fazem discípulos",
-                desc: "Nossa missão é clara: evangelizar, ensinar, envolver e enviar. Cada membro é um missionário em potencial no seu lar, trabalho e vizinhança.",
-              },
-              {
-                icon: BookOpen,
-                label: "Propósito",
-                title: "Glorificar a Deus em tudo",
-                desc: "Culto, serviço, comunidade e missão — tudo o que fazemos é uma resposta de amor e gratidão àquele que nos criou e nos redimiu.",
+                title: "Amar, anunciar e restaurar",
+                desc: "Amar pessoas, anunciar o evangelho de Jesus Cristo, restaurar vidas e formar discípulos que vivam o propósito de Deus e impactem nossa cidade.",
               },
             ].map((item, i) => (
               <motion.div
@@ -185,7 +151,7 @@ export default function Sobre() {
 
       {/* Valores */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
+        <div className="container mx-auto px-4 max-w-5xl text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -201,24 +167,105 @@ export default function Sobre() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground mb-12 max-w-2xl mx-auto"
           >
-            Não são apenas palavras — são compromissos que aparecem no dia a dia da nossa comunidade.
+            Esses princípios orientam a forma como vivemos, acolhemos e servimos uns aos outros.
           </motion.p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["Amor genuíno", "Transparência", "Discipulado", "Missão", "Comunidade", "Oração", "Serviço", "Integridade"].map((valor, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            {values.map((valor, i) => (
               <motion.div
-                key={valor}
+                key={valor.title}
                 custom={i}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-secondary/50 rounded-xl py-5 px-4 font-medium text-sm"
-                data-testid={`tag-valor-${i}`}
+                className="bg-secondary/50 rounded-2xl p-6 border border-border"
               >
-                {valor}
+                <h3 className="font-serif text-lg font-bold mb-2">{valor.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{valor.desc}</p>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-sm"
+          >
+            <h3 className="font-serif text-2xl md:text-3xl font-bold mb-6">Declaração de cultura da igreja</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Somos uma igreja centrada em Jesus e comprometida em viver o evangelho de forma verdadeira. Acreditamos que, em Cristo, sempre existe um novo começo. Por isso somos uma comunidade que acolhe pessoas com amor, graça e esperança.
+              </p>
+              <p>
+                Valorizamos uma vida de santidade, buscando refletir o caráter de Cristo em tudo o que fazemos. Caminhamos juntos no discipulado, ajudando uns aos outros a crescer na fé e a viver o propósito de Deus.
+              </p>
+              <p>
+                Cremos que Deus transforma histórias, restaura vidas e conduz cada pessoa a descobrir o propósito para o qual foi criada. Somos uma igreja que ama pessoas, serve com alegria e vive a missão de Deus.
+              </p>
+              <p>
+                Nosso desejo é ver vidas sendo transformadas, famílias sendo restauradas e nossa cidade sendo alcançada pelo amor de Cristo. Aqui celebramos novos começos.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-sm"
+          >
+            <h3 className="font-serif text-2xl md:text-3xl font-bold mb-6">Manifesto da igreja</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>Cremos em um Deus que transforma vidas.</p>
+              <p>Um Deus que restaura o que foi quebrado, cura o que foi ferido e oferece novos começos para todos que se aproximam dEle.</p>
+              <p>Somos uma igreja que acredita no poder do evangelho.</p>
+              <p>Acreditamos que ninguém está longe demais da graça de Deus.</p>
+              <p>Acreditamos que toda história pode ser transformada.</p>
+              <p>Acreditamos que cada pessoa foi criada por Deus com um propósito.</p>
+              <p>Somos uma comunidade que acolhe, discipula e caminha junto.</p>
+              <p>Buscamos viver uma vida de santidade, refletindo o amor e o caráter de Cristo em nossas atitudes.</p>
+              <p>Vivemos para anunciar a esperança do evangelho e para ver vidas sendo restauradas.</p>
+              <p>Amamos nossa cidade e desejamos ser luz onde há escuridão, esperança onde há dor e fé onde há dúvida.</p>
+              <p>Somos uma igreja que abre as portas, estende as mãos e aponta sempre para Jesus.</p>
+              <p>Aqui pessoas encontram esperança. Aqui vidas são restauradas. Aqui histórias são transformadas. Aqui sempre existe <strong>um novo começo</strong>.</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-3xl border border-border bg-card p-8 md:p-10 shadow-sm"
+          >
+            <h4 className="font-serif text-xl font-bold mb-6">DNA da igreja</h4>
+            <div className="grid gap-4 md:grid-cols-2">
+              {dnaStatements.map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.04 }}
+                  className="rounded-2xl border border-border/70 bg-secondary/40 p-5 shadow-sm"
+                >
+                  <p className="text-sm leading-relaxed text-muted-foreground">{item}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
