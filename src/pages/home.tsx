@@ -25,15 +25,18 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="space-y-6 max-w-3xl"
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary-foreground backdrop-blur-sm text-sm font-medium tracking-wide">
-              Bem-vindo à sua casa
-            </span>
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-white leading-tight">
-              Uma igreja para amar,<br />
-              <span className="text-primary">crescer e servir.</span>
+              Um Lugar de<br />
+              <span className="text-primary">Novos Começos</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/90 font-light max-w-2xl mx-auto">
-              Igreja do Nazareno Rosolém. Mais do que um lugar, uma família de fé onde você pode encontrar propósito, conexão verdadeira e o amor transformador de Jesus.
+            <p className="text-3xl md:text-5xl font-serif font-bold text-white/90 leading-tight mt-4">
+              Onde Histórias São Transformadas.
+            </p>
+            <p className="text-lg md:text-xl text-white/90 font-light max-w-2xl mx-auto mt-6">
+              Somos uma igreja de novos começos, onde Deus transforma histórias e pessoas descobrem seu propósito em Cristo.
+            </p>
+            <p className="text-sm md:text-base text-white/80 font-medium mt-6">
+              2 Coríntios 5:17
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button size="lg" className="rounded-full w-full sm:w-auto text-base" asChild>
@@ -94,10 +97,9 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Nossa Essência</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-            Acreditamos em um Evangelho simples, relacional e transformador. Nossa missão é
-            fazer discípulos semelhantes a Cristo nas nações, começando pelo nosso bairro.
-            Seja você um cristão de longa data ou alguém apenas buscando respostas,
-            aqui você tem um lugar à mesa.
+            Somos uma igreja centrada em Jesus, comprometida em viver o evangelho de forma verdadeira.
+            Acreditamos que, em Cristo, sempre existe um novo começo e que Deus transforma histórias,
+            restaura vidas e conduz cada pessoa a descobrir o propósito para o qual foi criada.
           </p>
           <Button variant="outline" size="lg" className="rounded-full" asChild>
             <Link href="/sobre">Leia mais sobre nós</Link>
