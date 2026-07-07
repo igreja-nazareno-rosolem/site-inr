@@ -184,6 +184,13 @@
     @apply border-border;
   }
 
+  /* O preflight do Tailwind v4 deixa botões com cursor default; o design
+     (handoff css/inr.css) usa cursor pointer em tudo que é clicável */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
   body {
     @apply font-sans antialiased bg-background text-foreground;
     line-height: 1.55;
