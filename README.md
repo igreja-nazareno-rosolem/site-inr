@@ -29,7 +29,7 @@ Site institucional da **Igreja do Nazareno Rosolém (INR)** — Hortolândia/SP.
 | `npm run preview` | Serve o build de produção localmente |
 | `npx tsc --noEmit` | Checagem de tipos (⚠️ o build do Vite **não** roda o `tsc`) |
 
-> Antes de abrir um PR, rode `npm run build` **e** `npx tsc --noEmit` — ambos devem passar.
+> Antes de abrir um PR, rode `npm run build` e `npx tsc --noEmit` — ambos devem passar.
 
 ## Rodando localmente
 
