@@ -2,26 +2,26 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-const chipVariants = cva("inr-chip", {
+const variantesChip = cva("inr-chip", {
   variants: {
-    variant: {
-      solid: "", // navy (default)
-      soft: "inr-chip-soft",
-      line: "inr-chip-line",
+    variante: {
+      solido: "", // navy (padrão)
+      suave: "inr-chip-soft",
+      linha: "inr-chip-line",
     },
   },
-  defaultVariants: { variant: "solid" },
+  defaultVariants: { variante: "solido" },
 });
 
 export interface ChipProps
   extends React.HTMLAttributes<HTMLSpanElement>,
-    VariantProps<typeof chipVariants> {}
+    VariantProps<typeof variantesChip> {}
 
 export const Chip = React.forwardRef<HTMLSpanElement, ChipProps>(
-  ({ className, variant, ...props }, ref) => (
-    <span ref={ref} className={cn(chipVariants({ variant }), className)} {...props} />
+  ({ className, variante, ...props }, ref) => (
+    <span ref={ref} className={cn(variantesChip({ variante }), className)} {...props} />
   )
 );
 Chip.displayName = "InrChip";
 
-export { chipVariants };
+export { variantesChip };
