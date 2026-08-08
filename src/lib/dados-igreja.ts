@@ -29,7 +29,7 @@ export const IGREJA = {
   endereco: "R. Ercílio Antônio Meira, 777 — Jardim Santa Izabel, Hortolândia/SP, 13185-220",
   enderecoCurto: "R. Ercílio Antônio Meira, 777 — Jd. Santa Izabel",
   telefone: "(19) 3869-8121",
-  atendimento: "Segunda a sexta, das 9h às 18h",
+  atendimento: "Segunda a sexta, das 9h às 17h",
   mapaEmbed:
     "https://www.google.com/maps?q=R.+Erc%C3%ADlio+Ant%C3%B4nio+Meira,+777+-+Jardim+Santa+Izabel,+Hortol%C3%A2ndia+-+SP,+13185-220&output=embed",
   mapaLink: "https://maps.google.com/?q=R.+Erc%C3%ADlio+Ant%C3%B4nio+Meira,+777,+Hortol%C3%A2ndia+SP",
@@ -179,8 +179,8 @@ export interface Ministerio {
 }
 
 export const MINISTERIOS: Ministerio[] = [
-  { id: "jni", icone: "chama", nome: "JNI", subtitulo: "Juventude Nazarena", proposito: "Reunir e formar os jovens da igreja em comunhão, louvor e missão.", participar: "Sábados, 19h30, no culto de jovens. Acompanhe @jnisemlimites.", instagram: REDES_SOCIAIS.jni },
-  { id: "nazateen", icone: "faisca", nome: "NazaTeen", subtitulo: "Adolescentes", proposito: "Espaço dos adolescentes para crescer na fé com amizade e diversão.", participar: "Sábados, junto ao culto da juventude. Siga @nazateenrosolem.", instagram: REDES_SOCIAIS.nazateen },
+  { id: "jni", icone: "chama", nome: "JNI", subtitulo: "Juventude Nazarena", proposito: "Reunir e formar os jovens da igreja em comunhão, louvor e missão.", participar: "Sábados, 19h30, no culto de jovens.", instagram: REDES_SOCIAIS.jni },
+  { id: "nazateen", icone: "faisca", nome: "NazaTeen", subtitulo: "Adolescentes", proposito: "Espaço dos adolescentes para crescer na fé com amizade e diversão.", participar: "Sábados, junto ao culto da juventude.", instagram: REDES_SOCIAIS.nazateen },
   { id: "infantil", icone: "pipa", nome: "Infantil", subtitulo: "Crianças", proposito: "Ensinar as crianças sobre Jesus de forma lúdica, segura e acolhedora.", participar: "Durante os cultos de domingo. Fale com Adriana de Paula." },
   { id: "louvor", icone: "musica", nome: "Louvor", subtitulo: "Adoração", proposito: "Conduzir a igreja à presença de Deus por meio da música.", participar: "Ensaios semanais. Fale com Wesley Alves." },
   { id: "midia", icone: "camera", nome: "Mídia", subtitulo: "Comunicação", proposito: "Transmissões, fotos e comunicação visual dos cultos e eventos.", participar: "Servir nas transmissões e redes. Fale com Rafael Fonseca." },
@@ -218,4 +218,9 @@ export const CONTATOS: Contato[] = [
 /** URL de um recurso em `public/` respeitando o base path do GitHub Pages. */
 export function urlPublica(caminho: string): string {
   return `${import.meta.env.BASE_URL}${caminho.replace(/^\//, "")}`;
+}
+
+export function usuarioInstagram(url: string): string {
+  const match = url.match(/instagram\.com\/([^/?#]+)(?:\/|$)/i);
+  return match ? `@${match[1].replace(/^@/, "")}` : "";
 }
