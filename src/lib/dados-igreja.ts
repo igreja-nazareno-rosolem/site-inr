@@ -93,14 +93,14 @@ export const IDENTIDADE = {
   declaracaoCultura: [
     "Somos uma igreja centrada em Jesus e comprometida em viver o evangelho de forma verdadeira.",
     "Acreditamos que, em Cristo, sempre existe um novo começo. Por isso somos uma comunidade que acolhe pessoas com amor, graça e esperança.",
-    "Valorizamos uma vida de santidade, buscando refletir o caráter de Cristo em tudo o que fazemos. Caminhamos juntos no discipulado, ajudando uns aos outros a crescer na fé e a viver o propósito de Deus.",
+    "Valorizamos uma vida de santidade, buscando refletir o caráter de Cristo em tudo o que fazemos. Caminhamos juntos no discipulado, ajudando uns aos outros a crescer na fé e a viver o propósito para o qual fomos criados.",
     "Cremos que Deus transforma histórias, restaura vidas e conduz cada pessoa a descobrir o propósito para o qual foi criada.",
     "Somos uma igreja que ama pessoas, serve com alegria e vive a missão de Deus.",
     "Nosso desejo é ver vidas sendo transformadas, famílias sendo restauradas e nossa cidade sendo alcançada pelo amor de Cristo.",
   ],
   declaracaoCulturaFinal: "Aqui celebramos novos começos.",
   manifestoIntro:
-    "Cremos em um Deus que transforma vidas — que restaura o que foi quebrado, cura o que foi ferido e oferece novos começos para todos que se aproximam dEle. Ninguém está longe demais da graça de Deus. Amamos nossa cidade e desejamos ser luz onde há escuridão, esperança onde há dor e fé onde há dúvida.",
+    "Cremos em um Deus que transforma vidas — que restaura o que foi quebrado, cura o que foi ferido e oferece novos começos para todos que se aproximam dEle. Ninguém está longe demais da graça de Deus. Ninguém é caso perdido.",
 } as const;
 
 /* ---------- Cultos da semana ---------- */
@@ -140,10 +140,8 @@ export interface Pastor {
 export const PASTORES: Pastor[] = [
   { nome: "Pr. Isaque", papel: "Pastor Presidente · Fundador", bio: "Fundou a INR e pastoreia a igreja desde 2001. Lidera com cuidado pastoral próximo de cada família.", destaque: true },
   { nome: "Pr. Adnan Attuy", papel: "Pastor Auxiliar", bio: "Coordena o ministério de Casais ao lado da esposa, Débora Attuy." },
-  { nome: "Pr. Gustavo Fontes", papel: "Pastor Auxiliar", bio: "Apoio ao corpo pastoral e ensino da Palavra." },
   { nome: "Pr. Gabriel", papel: "Pastor Auxiliar", bio: "Atua no acompanhamento e discipulado da igreja." },
   { nome: "Pr. Rivaldo Sena", papel: "Pastor Auxiliar", bio: "Dedicado ao cuidado pastoral e à pregação." },
-  { nome: "Pr. Jorge", papel: "Pastor Auxiliar", bio: "Apoio ministerial e suporte ao rebanho." },
 ];
 
 /* ---------- Equipe / líderes de áreas ---------- */
@@ -179,15 +177,15 @@ export interface Ministerio {
 }
 
 export const MINISTERIOS: Ministerio[] = [
-  { id: "jni", icone: "chama", nome: "JNI", subtitulo: "Juventude Nazarena", proposito: "Reunir e formar os jovens da igreja em comunhão, louvor e missão.", participar: "Sábados, 19h30, no culto de jovens.", instagram: REDES_SOCIAIS.jni },
-  { id: "nazateen", icone: "faisca", nome: "NazaTeen", subtitulo: "Adolescentes", proposito: "Espaço dos adolescentes para crescer na fé com amizade e diversão.", participar: "Sábados, junto ao culto da juventude.", instagram: REDES_SOCIAIS.nazateen },
-  { id: "infantil", icone: "pipa", nome: "Infantil", subtitulo: "Crianças", proposito: "Ensinar as crianças sobre Jesus de forma lúdica, segura e acolhedora.", participar: "Durante os cultos de domingo. Fale com Adriana de Paula." },
+  { id: "jni", icone: "chama", nome: "JNI", subtitulo: "Juventude Nazarena", proposito: "Reunir e formar os jovens da igreja em comunhão, louvor e missão.", participar: "Sábados, 19h30, no culto de jovens. Instagram: @jnisemlimites" },
+  { id: "nazateen", icone: "faisca", nome: "NazaTeen", subtitulo: "Adolescentes", proposito: "Espaço dos adolescentes para crescer na fé com amizade e diversão.", participar: "Sábados, junto com a JNI. Instagram: @nazateenrosolem" },
+  { id: "infantil", icone: "pipa", nome: "Infantil", subtitulo: "Crianças", proposito: "Ensinar as crianças sobre Jesus de forma lúdica, segura e acolhedora.", participar: "Durante os cultos do domingo. Fale com Adriana de Paula." },
   { id: "louvor", icone: "musica", nome: "Louvor", subtitulo: "Adoração", proposito: "Conduzir a igreja à presença de Deus por meio da música.", participar: "Ensaios semanais. Fale com Wesley Alves." },
-  { id: "midia", icone: "camera", nome: "Mídia", subtitulo: "Comunicação", proposito: "Transmissões, fotos e comunicação visual dos cultos e eventos.", participar: "Servir nas transmissões e redes. Fale com Rafael Fonseca." },
+  { id: "midia", icone: "camera", nome: "Mídia", subtitulo: "Comunicação", proposito: "Transmissões, fotos e comunicação visual dos cultos e eventos.", participar: "Servir nas transmissões e eventos. Fale com Rafael Fonseca." },
   { id: "recepcao", icone: "maos", nome: "Recepção", subtitulo: "Acolhida", proposito: "Receber cada pessoa com calor e atenção na chegada à igreja.", participar: "Escala de domingos. Fale na secretaria." },
-  { id: "dni", icone: "livro", nome: "DNI", subtitulo: "Discipulado", proposito: "Acompanhar novos convertidos e firmar a fé dos membros.", participar: "EBD aos domingos, 9h45, e grupos de discipulado." },
+  { id: "dni", icone: "livro", nome: "DNI", subtitulo: "Discipulado", proposito: "Acompanhar novos convertidos e firmar a fé dos membros.", participar: "EBD aos domingos, 9h45, e grupos de discipulado em pequenos grupos." },
   { id: "mni", icone: "globo", nome: "MNI", subtitulo: "Missões", proposito: "Mobilizar a igreja para missões locais e mundiais.", participar: "Participe das ações missionárias. Fale com Diego Santos." },
-  { id: "casais", icone: "aliancas", nome: "Casais", subtitulo: "Famílias", proposito: "Fortalecer casamentos à luz da Palavra.", participar: "Encontros periódicos. Fale com Pr. Adnan e Débora." },
+  { id: "casais", icone: "aliancas", nome: "Casais", subtitulo: "Famílias", proposito: "Fortalecer casamentos à luz da Palavra.", participar: "Encontros periódicos. Fale com Pr. Adnan e Débora Attuy." },
   { id: "homens", icone: "escudo", nome: "Homens", subtitulo: "Varões", proposito: "Comunhão e edificação dos homens da igreja.", participar: "1ª sexta do mês, 19h30. Fale com Alan." },
   { id: "mulheres", icone: "coracao", nome: "Mulheres", subtitulo: "MNI Mulheres", proposito: "Edificar e cuidar das mulheres em todas as fases da vida.", participar: "Última sexta do mês, 19h30. Fale com Carla." },
   { id: "social", icone: "presente", nome: "Ação Social", subtitulo: "Amor ao próximo", proposito: "Servir a comunidade do Rosolém com amor prático.", participar: "Campanhas e ações. Fale com Rones." },
@@ -208,7 +206,7 @@ export const CONTATOS: Contato[] = [
   { icone: "pessoas", titulo: "Ministérios", descricao: "Quero servir ou saber mais sobre um ministério.", whatsapp: WHATSAPP.secretaria, mensagem: "Olá! Quero saber sobre os ministérios da INR." },
   { icone: "oracao", titulo: "Pedido de oração", descricao: "Compartilhe seu pedido — vamos orar com você.", whatsapp: WHATSAPP.isaque, mensagem: "Paz! Gostaria de um pedido de oração." },
   { icone: "conversa", titulo: "Aconselhamento pastoral", descricao: "Converse com um pastor em particular.", whatsapp: WHATSAPP.isaque, mensagem: "Paz! Gostaria de marcar um aconselhamento pastoral." },
-  { icone: "calendario", titulo: "Eventos e espaços", descricao: "Reserva de salas e informações de eventos.", whatsapp: WHATSAPP.secretaria, mensagem: "Olá! Gostaria de informações sobre eventos/espaços." },
+  { icone: "calendario", titulo: "Eventos e espaços", descricao: "Reserva de salas e informações de eventos.", whatsapp: WHATSAPP.secretaria, mensagem: "Olá! Gostaria de informações sobre eventos e espaços." },
 ];
 
 // TODO Fase 2: AVISOS (boletim), VIDEOS (cultos online), JORNADA (novo aqui)
