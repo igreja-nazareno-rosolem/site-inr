@@ -67,22 +67,13 @@ export function Rodape() {
             </p>
             <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
               <a
-                href={REDES_SOCIAIS.nazateen}
+                href={REDES_SOCIAIS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inr-chip"
                 style={{ fontSize: 12, padding: "7px 13px", background: "rgba(255,255,255,.1)", color: "#fff" }}
               >
-                @nazateen
-              </a>
-              <a
-                href={REDES_SOCIAIS.jni}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inr-chip"
-                style={{ fontSize: 12, padding: "7px 13px", background: "rgba(255,255,255,.1)", color: "#fff" }}
-              >
-                @jni
+                @nazarenorosolem
               </a>
             </div>
           </div>

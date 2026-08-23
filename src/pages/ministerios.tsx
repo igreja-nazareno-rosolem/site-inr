@@ -1,7 +1,7 @@
 import { Botao, Cartao, Emblema, Sobretitulo } from "@/components/design-system";
 import { HeroPagina } from "@/components/hero-pagina";
 import { GlifoWhatsApp, Icone } from "@/components/icones/icones";
-import { MINISTERIOS, WHATSAPP, linkWhatsApp } from "@/lib/dados-igreja";
+import { MINISTERIOS, WHATSAPP, linkWhatsApp, usuarioInstagram } from "@/lib/dados-igreja";
 
 export default function Ministerios() {
   return (
@@ -50,7 +50,31 @@ export default function Ministerios() {
                     <Icone nome="seta" style={{ width: 15, height: 15, flex: "none" }} /> Como
                     participar
                   </p>
-                  <p style={{ fontSize: 13.5, color: "var(--ink-2)" }}>{ministerio.participar}</p>
+                  <p style={{ fontSize: 13.5, color: "var(--ink-2)" }}>
+                    {(() => {
+                      const textoBase = ministerio.participar.trim();
+                      const usuario = ministerio.instagram ? usuarioInstagram(ministerio.instagram) : "";
+
+                      return (
+                        <>
+                          {textoBase}
+                          {ministerio.instagram ? (
+                            <>
+                              {textoBase ? " " : ""} Acompanhe{" "}
+                              <a
+                                href={ministerio.instagram}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: "inherit", textDecoration: "none" }}
+                              >
+                                {usuario}
+                              </a>
+                            </>
+                          ) : null}
+                        </>
+                      );
+                    })()}
+                  </p>
                 </div>
               </Cartao>
             ))}
