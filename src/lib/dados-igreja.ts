@@ -218,6 +218,13 @@ export function urlPublica(caminho: string): string {
   return `${import.meta.env.BASE_URL}${caminho.replace(/^\//, "")}`;
 }
 
+/** URL interna do site, em caminho relativo ao router do Wouter.
+ * O router já considera o base do ambiente (localhost vs GitHub Pages),
+ * então não devemos prefixar o base aqui. */
+export function rotaInterna(caminho: string): string {
+  return caminho === "/" ? "/" : caminho.startsWith("/") ? caminho : `/${caminho}`;
+}
+
 export function usuarioInstagram(url: string): string {
   const match = url.match(/instagram\.com\/([^/?#]+)(?:\/|$)/i);
   return match ? `@${match[1].replace(/^@/, "")}` : "";

@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Instagram, Facebook, Youtube } from "@/components/icones/redes-sociais";
-import { IGREJA, IDENTIDADE, REDES_SOCIAIS, urlPublica } from "@/lib/dados-igreja";
+import { IGREJA, IDENTIDADE, REDES_SOCIAIS, rotaInterna, urlPublica } from "@/lib/dados-igreja";
 
 /** Rodapé navy em quatro colunas, conforme o design aprovado. */
 export function Rodape() {
@@ -37,10 +37,10 @@ export function Rodape() {
 
           <div>
             <h4>Navegar</h4>
-            <Link href="/sobre">Sobre</Link>
-            <Link href="/lideranca">Liderança</Link>
-            <Link href="/ministerios">Ministérios</Link>
-            <Link href="/agenda">Agenda</Link>
+            <Link href={rotaInterna("/sobre")}>Sobre</Link>
+            <Link href={rotaInterna("/lideranca")}>Liderança</Link>
+            <Link href={rotaInterna("/ministerios")}>Ministérios</Link>
+            <Link href={rotaInterna("/agenda")}>Agenda</Link>
             {/* TODO Fase 2: link "Novo aqui?" */}
           </div>
 
@@ -49,8 +49,8 @@ export function Rodape() {
             <a href={REDES_SOCIAIS.youtube} target="_blank" rel="noopener noreferrer">
               Cultos Online
             </a>
-            <Link href="/contribua">Contribua</Link>
-            <Link href="/contato">Contato</Link>
+            <Link href={rotaInterna("/contribua")}>Contribua</Link>
+            <Link href={rotaInterna("/contato")}>Contato</Link>
             {/* TODO Fase 2: Boletim e Secretaria · Fase 3: Transparência */}
           </div>
 

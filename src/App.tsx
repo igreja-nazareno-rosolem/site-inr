@@ -56,9 +56,11 @@ function Rotas() {
 }
 
 function App() {
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
   return (
     <QueryClientProvider client={clienteQuery}>
-      <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+      <WouterRouter base={base}>
         <Rotas />
       </WouterRouter>
     </QueryClientProvider>

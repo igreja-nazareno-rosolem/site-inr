@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { Botao } from "@/components/design-system";
 import { Icone, GlifoWhatsApp } from "@/components/icones/icones";
-import { IGREJA, WHATSAPP, linkWhatsApp, urlPublica } from "@/lib/dados-igreja";
+import { IGREJA, WHATSAPP, linkWhatsApp, rotaInterna, urlPublica } from "@/lib/dados-igreja";
 
 const LINKS_NAVEGACAO = [
   { caminho: "/", rotulo: "Início" },
@@ -42,14 +42,14 @@ export function Cabecalho() {
     <>
       <header className={cn("inr-nav", rolada && "inr-rolada")}>
         <div className="inr-wrap inr-nav-inner">
-          <Link href="/" className="inr-marca" onClick={fecharMenu}>
+          <Link href={rotaInterna("/")} className="inr-marca" onClick={fecharMenu}>
             <img src={urlPublica("logo-inr-branco.png")} alt={`${IGREJA.sigla} — ${IGREJA.nome}`} />
           </Link>
           <nav className="inr-nav-links" aria-label="Navegação principal">
             {LINKS_NAVEGACAO.map((link) => (
               <Link
                 key={link.caminho}
-                href={link.caminho}
+                href={rotaInterna(link.caminho)}
                 className={cn(caminhoAtual === link.caminho && "inr-ativa")}
               >
                 {link.rotulo}
@@ -57,7 +57,7 @@ export function Cabecalho() {
             ))}
           </nav>
           <Botao asChild variante="gradiente" tamanho="pequeno" className="inr-nav-cta">
-            <Link href="/contribua">
+            <Link href={rotaInterna("/contribua")}>
               <Icone nome="coracao" /> Contribua
             </Link>
           </Botao>
@@ -74,7 +74,7 @@ export function Cabecalho() {
 
       <div className={cn("inr-menu-lateral", menuAberto && "inr-aberto")} aria-hidden={!menuAberto}>
         <div className="inr-menu-topo">
-          <Link href="/" className="inr-marca" onClick={fecharMenu}>
+          <Link href={rotaInterna("/")} className="inr-marca" onClick={fecharMenu}>
             <img src={urlPublica("logo-inr-branco.png")} alt={`${IGREJA.sigla} — ${IGREJA.nome}`} />
           </Link>
           <button className="inr-menu-fechar" aria-label="Fechar menu" onClick={fecharMenu}>
@@ -85,7 +85,7 @@ export function Cabecalho() {
           {LINKS_NAVEGACAO.map((link) => (
             <Link
               key={link.caminho}
-              href={link.caminho}
+              href={rotaInterna(link.caminho)}
               className={cn(caminhoAtual === link.caminho && "inr-ativa")}
               onClick={fecharMenu}
             >
@@ -98,7 +98,7 @@ export function Cabecalho() {
         </nav>
         <div className="inr-menu-rodape">
           <Botao asChild variante="gradiente" bloco>
-            <Link href="/contribua" onClick={fecharMenu}>
+            <Link href={rotaInterna("/contribua")} onClick={fecharMenu}>
               <Icone nome="coracao" /> Contribua
             </Link>
           </Botao>

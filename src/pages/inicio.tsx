@@ -7,6 +7,7 @@ import {
   MINISTERIOS,
   PROXIMOS_CULTOS,
   REDES_SOCIAIS,
+  rotaInterna,
   urlPublica,
 } from "@/lib/dados-igreja";
 
@@ -33,7 +34,7 @@ export default function Inicio() {
           </p>
           <div className="inr-hero-ctas">
             <Botao asChild variante="claro">
-              <Link href="/agenda">
+              <Link href={rotaInterna("/agenda")}>
                 <Icone nome="calendario" /> Programação
               </Link>
             </Botao>
@@ -48,7 +49,7 @@ export default function Inicio() {
               </a>
             </Botao>
             <Botao asChild variante="fantasma">
-              <Link href="/contribua">
+              <Link href={rotaInterna("/contribua")}>
                 <Icone nome="coracao" /> Contribua
               </Link>
             </Botao>
@@ -73,7 +74,7 @@ export default function Inicio() {
               <h2 style={{ marginTop: 12 }}>Ministérios para cada idade</h2>
             </div>
             <Botao asChild variante="contorno" tamanho="pequeno">
-              <Link href="/ministerios">
+              <Link href={rotaInterna("/ministerios")}>
                 Ver todos <Icone nome="seta" />
               </Link>
             </Botao>
@@ -117,7 +118,7 @@ export default function Inicio() {
                 participar.
               </p>
               <Botao asChild variante="gradiente" style={{ marginTop: 24 }}>
-                <Link href="/agenda">
+                <Link href={rotaInterna("/agenda")}>
                   <Icone nome="calendario" /> Ver agenda completa
                 </Link>
               </Botao>
@@ -156,7 +157,7 @@ export default function Inicio() {
               </p>
               {/* TODO Fase 2: apontar para a página "Novo aqui?" quando ela existir */}
               <Botao asChild variante="claro" style={{ alignSelf: "flex-start", marginTop: 6 }}>
-                <Link href="/contato">
+                <Link href={rotaInterna("/contato")}>
                   Começar jornada <Icone nome="seta" />
                 </Link>
               </Botao>
@@ -177,7 +178,7 @@ export default function Inicio() {
                   </a>
                 </Botao>
                 <Botao asChild variante="contorno">
-                  <Link href="/contato">
+                  <Link href={rotaInterna("/contato")}>
                     <Icone nome="conversa" /> Falar conosco
                   </Link>
                 </Botao>
