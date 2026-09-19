@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Botao, Cartao, Emblema, FotoPlaceholder, Sobretitulo, TituloSecao } from "@/components/design-system";
 import { HeroPagina } from "@/components/hero-pagina";
 import { Icone } from "@/components/icones/icones";
-import { IDENTIDADE, rotaInterna } from "@/lib/dados-igreja";
+import { IDENTIDADE } from "@/lib/dados-igreja";
 
 export default function Sobre() {
   return (
@@ -208,12 +208,12 @@ export default function Sobre() {
             </div>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
               <Botao asChild variante="gradiente">
-                <Link href={rotaInterna("/lideranca")}>
+                <Link href="/lideranca">
                   <Icone nome="pessoas" /> Liderança
                 </Link>
               </Botao>
               <Botao asChild variante="contorno">
-                <Link href={rotaInterna("/ministerios")}>
+                <Link href="/ministerios">
                   <Icone nome="maos" /> Ministérios
                 </Link>
               </Botao>

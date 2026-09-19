@@ -60,7 +60,7 @@ function App() {
 
   return (
     <QueryClientProvider client={clienteQuery}>
-      <WouterRouter base={base}>
+      <WouterRouter base={base || "/"}>
         <Rotas />
       </WouterRouter>
     </QueryClientProvider>

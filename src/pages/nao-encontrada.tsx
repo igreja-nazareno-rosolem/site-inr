@@ -1,7 +1,6 @@
 import { Link } from "wouter";
 import { Botao, Sobretitulo } from "@/components/design-system";
 import { Icone } from "@/components/icones/icones";
-import { rotaInterna } from "@/lib/dados-igreja";
 
 export default function NaoEncontrada() {
   return (
@@ -15,7 +14,7 @@ export default function NaoEncontrada() {
           A página que você procura não existe ou pode ter sido movida.
         </p>
         <Botao asChild variante="gradiente">
-          <Link href={rotaInterna("/")}>
+          <Link href="/">
             <Icone nome="seta" /> Voltar para o início
           </Link>
         </Botao>

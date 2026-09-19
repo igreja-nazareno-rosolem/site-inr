@@ -6,8 +6,9 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// For user/org GitHub Pages (https://username.github.io/)
-const BASE = "/site-inr/";
+// Em desenvolvimento, o app fica na raiz do localhost.
+// Em produção, o GitHub Pages hospeda em /site-inr/.
+const BASE = process.env.NODE_ENV === "development" ? "/" : "/site-inr/";
 
 export default defineConfig({
   base: BASE,
