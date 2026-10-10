@@ -13,32 +13,6 @@ export default function Contato() {
         foto="fotos/foto2.jpg"
       />
 
-      {/* Cartões por assunto */}
-      <section className="inr-section inr-plain">
-        <div className="inr-wrap">
-          <div className="inr-grid inr-g-3" style={{ gridAutoRows: "1fr" }}>
-            {CONTATOS.map((contato) => (
-              <Cartao key={contato.titulo} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                <Emblema suave>
-                  <Icone nome={contato.icone} />
-                </Emblema>
-                <h3 style={{ fontSize: 19 }}>{contato.titulo}</h3>
-                <p style={{ fontSize: 14, color: "var(--ink-2)", flex: 1 }}>{contato.descricao}</p>
-                <Botao asChild variante="whatsapp" tamanho="pequeno" style={{ alignSelf: "flex-start" }}>
-                  <a
-                    href={linkWhatsApp(contato.whatsapp, contato.mensagem)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GlifoWhatsApp style={{ width: 16, height: 16 }} /> WhatsApp
-                  </a>
-                </Botao>
-              </Cartao>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Atendimento + mapa */}
       <section className="inr-section inr-light">
         <div className="inr-wrap">
