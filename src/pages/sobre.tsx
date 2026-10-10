@@ -1,8 +1,8 @@
 import { Link } from "wouter";
-import { Botao, Cartao, Emblema, FotoPlaceholder, Sobretitulo, TituloSecao } from "@/components/design-system";
+import { Botao, Cartao, Emblema, Sobretitulo, TituloSecao } from "@/components/design-system";
 import { HeroPagina } from "@/components/hero-pagina";
 import { Icone } from "@/components/icones/icones";
-import { IDENTIDADE } from "@/lib/dados-igreja";
+import { IDENTIDADE, urlPublica } from "@/lib/dados-igreja";
 
 export default function Sobre() {
   return (
@@ -53,11 +53,30 @@ export default function Sobre() {
                 e enviar.
               </p>
             </div>
-            {/* TODO: confirmar com a equipe a foto da fachada/congregação */}
-            <FotoPlaceholder
-              rotulo="foto · fachada / congregação"
-              style={{ minHeight: 320, borderRadius: 24 }}
-            />
+            <div
+              style={{
+                width: "100%",
+                maxWidth: 620,
+                aspectRatio: "16 / 10",
+                borderRadius: 24,
+                overflow: "hidden",
+                boxShadow: "0 20px 40px rgba(10, 22, 38, 0.12)",
+                background: "#dfe7f4",
+              }}
+            >
+              <img
+                src={urlPublica("fotos/congregacao.jpg")}
+                alt="Congregação da Igreja do Nazareno Rosolém"
+                loading="lazy"
+                style={{
+                  display: "block",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>

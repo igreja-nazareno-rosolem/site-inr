@@ -1,7 +1,7 @@
-import { AvatarIniciais, Cartao, Chip, FotoPlaceholder, TituloSecao } from "@/components/design-system";
+import { AvatarIniciais, Cartao, Chip, TituloSecao } from "@/components/design-system";
 import { HeroPagina } from "@/components/hero-pagina";
 import { Icone } from "@/components/icones/icones";
-import { EQUIPE, PASTORES } from "@/lib/dados-igreja";
+import { EQUIPE, PASTORES, urlPublica } from "@/lib/dados-igreja";
 
 export default function Lideranca() {
   const pastorPresidente = PASTORES.find((pastor) => pastor.destaque);
@@ -29,12 +29,30 @@ export default function Lideranca() {
           <div className="inr-grid inr-g-3" style={{ gridAutoRows: "1fr" }}>
             {pastorPresidente ? (
               <Cartao className="inr-pastor-destaque">
-                {/* TODO: confirmar com a equipe a foto do Pr. Isaque */}
-                <FotoPlaceholder
-                  sobreGradiente
-                  rotulo={`foto · ${pastorPresidente.nome}`}
-                  style={{ width: 150, height: 150, borderRadius: 20, minHeight: 0 }}
-                />
+                <div
+                  style={{
+                    width: 150,
+                    height: 150,
+                    borderRadius: 20,
+                    overflow: "hidden",
+                    flexShrink: 0,
+                    boxShadow: "0 12px 28px rgba(8, 15, 28, 0.18)",
+                    background: "#dfe7f4",
+                  }}
+                >
+                  <img
+                    src={urlPublica("fotos/pastor-isaque.png")}
+                    alt={`Foto do ${pastorPresidente.nome}`}
+                    loading="lazy"
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center top",
+                    }}
+                  />
+                </div>
                 <div>
                   <Chip style={{ background: "rgba(255,255,255,.18)" }}>
                     <Icone nome="estrela" style={{ width: 16, height: 16 }} /> Pastor Presidente
